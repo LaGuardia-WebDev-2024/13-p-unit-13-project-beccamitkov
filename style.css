@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 #movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
+  background: rgb(233, 98, 181);
+  border: 10px solid blue;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -8,8 +9,8 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
+  background: rgb(200, 159, 255);
+  border: 10px solid blue;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -19,4 +20,13 @@
 hr {
   height: 5px;
   background-color: black;
+}
+html {
+
+  font-family: "Gill Sans", sans-serif;
+  font-style: italic;
+  font-synthesis: small-caps;
+  font-variant: normal;
+  font-kerning: normal;
+  font-size: 1.2rem;
 }

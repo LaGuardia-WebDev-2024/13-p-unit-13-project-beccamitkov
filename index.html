@@ -1,9 +1,9 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ yes ] Two Interactive Drop-down Inputs 
+[ yes ] Two Different jQuery Animation Methods 
+[yes  ] Add Five CSS Declarations
+[  yes] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -21,17 +21,17 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Me!</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Cruel Intentions</option>
+          <option value="movie2">Wolf Of Wall Street</option>
+          <option value="movie3">La La Land</option>
+          <option value="movie4">Bridget Jones's Diary</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,31 +43,39 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">The Silent Patient</option>
+          <option value="book2">Girl in Translation</option>
+          <option value="book3">The Glass Castle</option>
+          <option value="book4">Little Women</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+    
+    <img id="bubbleImage" src="https://www.inkatrinaskitchen.com/wp-content/uploads/2020/05/Strawberry-Bubble-Tea-24-wm-600.jpg" width="200">
+    <img src="https://i.pinimg.com/236x/33/54/4d/33544d19afa58229e62701b414a5f487.jpg" width="200" length="100">
+    <img src="https://i.pinimg.com/736x/cf/6f/53/cf6f5341a67f2c149e4434f348c5da00.jpg" width="200">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("h1").hide()
+      $("h1").show(3000)
+      $("#bubbleImage").hide()
+      $("#bubbleImage").fadeIn(2000)
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
-
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+          console.log(answer);
+        if (answer === "movie4") {
+          $("#movie-result").text("Correct!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#movie-result").text("Better luck next time!");
         }
       });
-
+//var movieImages
       //Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
@@ -75,7 +83,7 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book3") {
           $("#book-result").text("YESSSS!");
         } else {
           $("#book-result").text("Try Again!");
